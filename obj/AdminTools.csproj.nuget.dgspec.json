@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Abhiiously\\Documents\\GitHub\\admintools\\AdminTools\\AdminTools.csproj": {}
+    "C:\\Users\\Abhiiously\\Documents\\GitHub\\admintools\\AdminTools.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Abhiiously\\Documents\\GitHub\\admintools\\AdminTools\\AdminTools.csproj": {
+    "C:\\Users\\Abhiiously\\Documents\\GitHub\\admintools\\AdminTools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Abhiiously\\Documents\\GitHub\\admintools\\AdminTools\\AdminTools.csproj",
+        "projectUniqueName": "C:\\Users\\Abhiiously\\Documents\\GitHub\\admintools\\AdminTools.csproj",
         "projectName": "AdminTools",
-        "projectPath": "C:\\Users\\Abhiiously\\Documents\\GitHub\\admintools\\AdminTools\\AdminTools.csproj",
+        "projectPath": "C:\\Users\\Abhiiously\\Documents\\GitHub\\admintools\\AdminTools.csproj",
         "packagesPath": "C:\\Users\\Abhiiously\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Abhiiously\\Documents\\GitHub\\admintools\\AdminTools\\obj\\",
+        "outputPath": "C:\\Users\\Abhiiously\\Documents\\GitHub\\admintools\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

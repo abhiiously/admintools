@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AdminTools")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a12f20db5ad294b0655fe333d14be1acf301017")]
 [assembly: System.Reflection.AssemblyProductAttribute("AdminTools")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AdminTools")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
