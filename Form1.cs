@@ -19,6 +19,9 @@ namespace AdminTools
 
         private void InitializeForm()
         {
+            this.Text = "Admin Tools";
+            this.Size = new Size(600, 400); // Adjust the size as necessary
+
             flowLayoutPanel1 = new FlowLayoutPanel
             {
                 Dock = DockStyle.Fill,
@@ -30,19 +33,32 @@ namespace AdminTools
 
         private void LoadScripts()
         {
-            string batchScriptsPath = @"C:\Users\Abhiiously\Documents\GitHub\admintools\data\scripts\batch";  // Adjust path for batch scripts
-            string powershellScriptsPath = @"C:\Users\Abhiiously\Documents\GitHub\admintools\data\scripts\powershell";  // Adjust path for PowerShell scripts
+            // Update these paths to match your actual directories
+            string batchScriptsPath = @"C:\Users\Abhiiously\Documents\GitHub\admintools\data\scripts\batch";
+            string powershellScriptsPath = @"C:\Users\Abhiiously\Documents\GitHub\admintools\data\scripts\powershell";
 
-            // Load Batch scripts
+            MessageBox.Show($"Loading Batch scripts from: {batchScriptsPath}"); // Debugging line
             LoadScriptsFromDirectory(batchScriptsPath, "*.bat");
 
-            // Load PowerShell scripts
+            MessageBox.Show($"Loading PowerShell scripts from: {powershellScriptsPath}"); // Debugging line
             LoadScriptsFromDirectory(powershellScriptsPath, "*.ps1");
         }
 
         private void LoadScriptsFromDirectory(string path, string pattern)
         {
+            if (!Directory.Exists(path))
+            {
+                MessageBox.Show($"Directory not found: {path}", "Directory Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             var scriptFiles = Directory.GetFiles(path, pattern, SearchOption.TopDirectoryOnly);
+
+            if (scriptFiles.Length == 0)
+            {
+                MessageBox.Show($"No scripts found in: {path}", "Scripts Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             foreach (string script in scriptFiles)
             {
@@ -68,7 +84,7 @@ namespace AdminTools
 
             try
             {
-                // Adjust the process start info based on script extension
+                // Determine which command processor to use based on file extension
                 ProcessStartInfo psi = new ProcessStartInfo
                 {
                     FileName = scriptPath.EndsWith(".ps1") ? "powershell.exe" : "cmd.exe",
@@ -81,7 +97,7 @@ namespace AdminTools
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Failed to run script: {scriptPath}\nError: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Failed to run script: {scriptPath}\nError: {ex.Message}", "Script Execution Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
