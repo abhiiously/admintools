@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace AdminTools
 {
@@ -29,11 +30,19 @@ namespace AdminTools
 
         private void LoadScripts()
         {
-            string scriptsPath = @"C:\Path\To\Scripts";  // Adjust path as needed
-            flowLayoutPanel1.Controls.Clear(); // Clear existing buttons before loading new ones
+            string batchScriptsPath = @"C:\Users\Abhiiously\Documents\GitHub\admintools\data\scripts\batch";  // Adjust path for batch scripts
+            string powershellScriptsPath = @"C:\Users\Abhiiously\Documents\GitHub\admintools\data\scripts\powershell";  // Adjust path for PowerShell scripts
 
-            var scriptFiles = Directory.GetFiles(scriptsPath, "*.*", SearchOption.TopDirectoryOnly)
-                                       .Where(s => s.EndsWith(".ps1") || s.EndsWith(".bat"));
+            // Load Batch scripts
+            LoadScriptsFromDirectory(batchScriptsPath, "*.bat");
+
+            // Load PowerShell scripts
+            LoadScriptsFromDirectory(powershellScriptsPath, "*.ps1");
+        }
+
+        private void LoadScriptsFromDirectory(string path, string pattern)
+        {
+            var scriptFiles = Directory.GetFiles(path, pattern, SearchOption.TopDirectoryOnly);
 
             foreach (string script in scriptFiles)
             {
@@ -59,7 +68,16 @@ namespace AdminTools
 
             try
             {
-                Process.Start("powershell.exe", $"-NoProfile -ExecutionPolicy Bypass -File \"{scriptPath}\"");
+                // Adjust the process start info based on script extension
+                ProcessStartInfo psi = new ProcessStartInfo
+                {
+                    FileName = scriptPath.EndsWith(".ps1") ? "powershell.exe" : "cmd.exe",
+                    Arguments = scriptPath.EndsWith(".ps1") ? $"-NoProfile -ExecutionPolicy Bypass -File \"{scriptPath}\"" : $"/c \"{scriptPath}\"",
+                    UseShellExecute = false,
+                    CreateNoWindow = true
+                };
+                Process process = Process.Start(psi);
+                process.WaitForExit();
             }
             catch (Exception ex)
             {
