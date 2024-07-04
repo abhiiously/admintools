@@ -1,0 +1,14 @@
+C:\Users\Abhiiously\Documents\GitHub\admintools\AdminTools\bin\Debug\net8.0-windows\AdminTools.exe
+C:\Users\Abhiiously\Documents\GitHub\admintools\AdminTools\bin\Debug\net8.0-windows\AdminTools.deps.json
+C:\Users\Abhiiously\Documents\GitHub\admintools\AdminTools\bin\Debug\net8.0-windows\AdminTools.runtimeconfig.json
+C:\Users\Abhiiously\Documents\GitHub\admintools\AdminTools\bin\Debug\net8.0-windows\AdminTools.dll
+C:\Users\Abhiiously\Documents\GitHub\admintools\AdminTools\bin\Debug\net8.0-windows\AdminTools.pdb
+C:\Users\Abhiiously\Documents\GitHub\admintools\AdminTools\obj\Debug\net8.0-windows\AdminTools.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abhiiously\Documents\GitHub\admintools\AdminTools\obj\Debug\net8.0-windows\AdminTools.AssemblyInfoInputs.cache
+C:\Users\Abhiiously\Documents\GitHub\admintools\AdminTools\obj\Debug\net8.0-windows\AdminTools.AssemblyInfo.cs
+C:\Users\Abhiiously\Documents\GitHub\admintools\AdminTools\obj\Debug\net8.0-windows\AdminTools.csproj.CoreCompileInputs.cache
+C:\Users\Abhiiously\Documents\GitHub\admintools\AdminTools\obj\Debug\net8.0-windows\AdminTools.dll
+C:\Users\Abhiiously\Documents\GitHub\admintools\AdminTools\obj\Debug\net8.0-windows\refint\AdminTools.dll
+C:\Users\Abhiiously\Documents\GitHub\admintools\AdminTools\obj\Debug\net8.0-windows\AdminTools.pdb
+C:\Users\Abhiiously\Documents\GitHub\admintools\AdminTools\obj\Debug\net8.0-windows\AdminTools.genruntimeconfig.cache
+C:\Users\Abhiiously\Documents\GitHub\admintools\AdminTools\obj\Debug\net8.0-windows\ref\AdminTools.dll
